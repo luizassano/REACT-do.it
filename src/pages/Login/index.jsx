@@ -9,7 +9,7 @@ import {yupResolver} from "@hookform/resolvers/yup"
 import { api } from "../../services/api"
 import { toast } from "react-toastify";
 
-export const Signup = () => {
+export const Login = () => {
 
     const schema = yup.object().shape({
       name: yup.string().required("Campo Obrigatório!!"),
@@ -36,20 +36,17 @@ export const Signup = () => {
 
  return( 
     <Container>
-       <Background/>
         <Content>
             <AnimationContainer>
                 <form onSubmit={handleSubmit(onSubmitFunction)}>
-                    <h1>Cadastro</h1>
-                    <Input register={register} icon={FiUser} label='Nome'  placeholder="Seu nome" name="name" error={errors.name?.message}/>
+                    <h1>Login</h1>
                     <Input register={register} icon={FiMail} label='Email' placeholder="Seu melhor email" name="email" error={errors.email?.message} />
                     <Input register={register} icon={FiLock} label='Senha' placeholder="Uma senha bem segura" type="password" name="password" error={errors.password?.message}/>
-                    <Input register={register} icon={FiLock} label='Confirmar senha'  placeholder="Confirmação da senha" type="password" name="passwordConfirm" error={errors.passwordConfirm?.message}/>
-
                     <Button type="submit">Enviar</Button>
-                    <p>Já tem uma conta? Faça seu <Link to='/login'>login</Link></p>
+                    <p>Não tem uma conta? Faça seu <Link to='/signup'>cadastro</Link></p>
                 </form>
             </AnimationContainer>
         </Content>
+        <Background/>
     </Container>
     )}
