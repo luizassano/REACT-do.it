@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import SingupImage from "../../assets/Cadastro.svg";
+import SingupImage from "../../assets/Singup.svg";
 
 export const Container = styled.div`
   height: 100vh;
@@ -24,10 +24,10 @@ export const Content = styled.div`
   max-width: 700px;
 `;
 
-export const AppearFromLeft = keyframes`
+export const AppearFromRigth = keyframes`
 from{
     opacity:0;
-    transform: translateX(-50px)
+    transform: translateX(50px)
 }
 to{
     opacity:1;
@@ -39,7 +39,7 @@ export const AnimationContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  animation: ${AppearFromLeft} 1s;
+  animation: ${AppearFromRigth} 1s;
 
   form {
     margin: 80px 0;

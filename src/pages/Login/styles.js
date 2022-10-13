@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import SingupImage from "../../assets/Singup.svg";
+import loginImage from "../../assets/Cadastro.svg";
 
 export const Container = styled.div`
   height: 100vh;
@@ -10,7 +10,7 @@ export const Container = styled.div`
 export const Background = styled.div`
   @media (min-width: 1100px) {
     flex: 1;
-    background: url(${SingupImage}) no-repeat center, var(--black);
+    background: url(${loginImage}) no-repeat center, var(--black);
     background-size: contain;
   }
 `;
@@ -24,10 +24,10 @@ export const Content = styled.div`
   max-width: 700px;
 `;
 
-export const AppearFromRigth = keyframes`
+export const AppearFromLeft = keyframes`
 from{
     opacity:0;
-    transform: translateX(50px)
+    transform: translateX(-50px)
 }
 to{
     opacity:1;
@@ -39,7 +39,7 @@ export const AnimationContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  animation: ${AppearFromRigth} 1s;
+  animation: ${AppearFromLeft} 1s;
 
   form {
     margin: 80px 0;

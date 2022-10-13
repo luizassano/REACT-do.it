@@ -1,5 +1,6 @@
-import axios from "axios"
+import axios from "axios";
 
-export const api = axios.create({
-    baseURL: "https://api-nodejs-todolist.herokuapp.com/",
+const api = axios.create({
+  baseURL: "https://api-nodejs-todolist.herokuapp.com/",
 });
+export default api;
